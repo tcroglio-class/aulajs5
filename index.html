@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de livros</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <h1>Calculadora de Preços de Livros</h1>
+        <div class="content">
+            <div class="form">
+                <div class="line">
+                    <label for="precoLivro">Preço Unitário do livro: (R$)</label>
+                    <input type="text" name="precoLivro" id="precoLivro">
+                </div>
+                <div class="line">
+                    <label for="qtdLivros">Quantidade de Livros: </label>
+                    <input type="text" name="qtdLivros" id="qtdLivros">
+                </div>
+            </div>
+
+            <button onclick="calcular()">Calcular Preço Final</button>
+            <button onclick="redefinir()">Redifinir Cálculo</button>
+
+        </div>
+
+        <div class="result" id="result">
+            <p id="precoFinal">Lista de Livros: </p>
+            <div id="aqui">
+                <ul id="lista"></ul>
+            </div>
+            </ul>
+            <p id="valorTotal">Valor Total: R$</p>
+            <button onclick="fecharPedido()" style="margin-bottom: 10px; margin-left: 0;">Fechar Pedido</button>
+        </div>
+
+        <div class="modal" id="modal">
+            <h1>Fechar Pedido</h1>
+            <div class="linha">
+                <div class="valor">
+                    <span>VALOR TOTAL</span>
+                    <span id="confirmarValor">Valor total</span>
+                </div>
+                <div class="quantidade">
+                    <span>QUANTIDADE:</span>
+                    <span id="confirmarQuantidade">quantidade</span>
+                </div>  
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
